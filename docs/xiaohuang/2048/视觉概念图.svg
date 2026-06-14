@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff5df"/>
+      <stop offset="0.56" stop-color="#ffe8c4"/>
+      <stop offset="1" stop-color="#f5cfa6"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ddb47f"/>
+      <stop offset="1" stop-color="#bd8151"/>
+    </linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd86d"/>
+      <stop offset="1" stop-color="#f7aa4d"/>
+    </linearGradient>
+    <linearGradient id="pinkButton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc0d7"/>
+      <stop offset="1" stop-color="#f48fac"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#8c5d37" flood-opacity="0.22"/>
+    </filter>
+    <filter id="tinyShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#7b5137" flood-opacity="0.2"/>
+    </filter>
+    <style>
+      .brown { fill: #6f432b; }
+      .stroke { stroke: #6f432b; stroke-width: 10; stroke-linejoin: round; stroke-linecap: round; }
+      .thinStroke { stroke: #6f432b; stroke-width: 7; stroke-linejoin: round; stroke-linecap: round; }
+      .title { font-family: "Arial Rounded MT Bold", "PingFang SC", sans-serif; font-size: 92px; font-weight: 900; letter-spacing: 0; }
+      .label { font-family: "Arial Rounded MT Bold", "PingFang SC", sans-serif; font-size: 34px; font-weight: 800; letter-spacing: 0; }
+      .score { font-family: "Arial Rounded MT Bold", "PingFang SC", sans-serif; font-size: 56px; font-weight: 900; letter-spacing: 0; }
+      .tileNum { font-family: "Arial Rounded MT Bold", "PingFang SC", sans-serif; font-size: 52px; font-weight: 900; letter-spacing: 0; }
+      .buttonText { font-family: "Arial Rounded MT Bold", "PingFang SC", sans-serif; font-size: 42px; font-weight: 900; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <circle cx="540" cy="510" r="460" fill="#ffe2bc" stroke="#e0ad7a" stroke-width="14"/>
+  <path d="M128 482 C260 382 380 368 540 430 C702 368 826 382 952 482" fill="none" stroke="#d29a6e" stroke-width="12" stroke-linecap="round" opacity="0.45"/>
+  <path d="M0 1510 C190 1458 376 1450 540 1490 C720 1535 908 1508 1080 1450 L1080 1920 L0 1920 Z" fill="url(#floor)"/>
+  <g opacity="0.22" stroke="#8a5637" stroke-width="6">
+    <path d="M60 1590 H1020"/>
+    <path d="M20 1710 H1060"/>
+    <path d="M80 1830 H1000"/>
+    <path d="M220 1515 V1920"/>
+    <path d="M500 1500 V1920"/>
+    <path d="M790 1490 V1920"/>
+  </g>
+
+  <g transform="translate(128 138)">
+    <path d="M0 42 C92 10 230 2 386 16 C548 0 706 12 824 48 L796 202 C640 178 506 178 382 188 C248 178 120 186 28 204 Z" fill="#b77848" class="stroke" filter="url(#softShadow)"/>
+    <path d="M45 54 C156 30 284 28 394 40 C534 22 658 34 780 64 L760 168 C636 150 512 150 394 158 C258 150 146 158 58 170 Z" fill="#f7cf86" stroke="#8a5735" stroke-width="6"/>
+    <text x="412" y="130" text-anchor="middle" class="title" fill="#fff6d8" stroke="#6f432b" stroke-width="6" paint-order="stroke fill">鸡窝 2048</text>
+  </g>
+
+  <g transform="translate(808 276)" filter="url(#tinyShadow)">
+    <ellipse cx="76" cy="92" rx="70" ry="74" fill="#fff2cc" class="thinStroke"/>
+    <path d="M28 42 C32 10 66 12 70 42 C84 8 118 20 108 52" fill="#ef6b5d" class="thinStroke"/>
+    <circle cx="52" cy="88" r="7" fill="#6f432b"/>
+    <path d="M84 89 Q106 92 120 82" fill="none" class="thinStroke"/>
+    <path d="M30 132 H122 V178 H30 Z" fill="#f5a9be" class="thinStroke"/>
+    <path d="M52 132 V178 M82 132 V178 M30 154 H122" stroke="#fff0f6" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(136 360)">
+    <rect x="8" y="12" width="374" height="140" rx="42" fill="#8c5d37" opacity="0.14"/>
+    <rect x="0" y="0" width="374" height="140" rx="42" fill="#fff7df" class="stroke"/>
+    <text x="187" y="52" text-anchor="middle" class="label brown">本局得分</text>
+    <text x="187" y="112" text-anchor="middle" class="score brown">3488</text>
+  </g>
+  <g transform="translate(570 360)">
+    <rect x="8" y="12" width="374" height="140" rx="42" fill="#8c5d37" opacity="0.14"/>
+    <rect x="0" y="0" width="374" height="140" rx="42" fill="#fff7df" class="stroke"/>
+    <text x="187" y="52" text-anchor="middle" class="label brown">最高纪录</text>
+    <text x="187" y="112" text-anchor="middle" class="score brown">8192</text>
+  </g>
+
+  <g transform="translate(106 570)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="868" height="868" rx="64" fill="#b9784c" class="stroke"/>
+    <rect x="38" y="38" width="792" height="792" rx="44" fill="#d49a66" stroke="#8c5a37" stroke-width="8"/>
+    <g opacity="0.25" stroke="#8c5a37" stroke-width="5">
+      <path d="M80 110 C220 80 306 104 420 122 C550 146 650 86 790 112"/>
+      <path d="M70 750 C220 702 330 760 440 738 C580 710 672 760 800 728"/>
+    </g>
+
+    <g transform="translate(74 74)">
+      <rect x="0" y="0" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="198" y="0" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="396" y="0" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="594" y="0" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="0" y="198" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="198" y="198" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="396" y="198" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="594" y="198" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="0" y="396" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="198" y="396" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="396" y="396" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="594" y="396" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="0" y="594" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="198" y="594" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="396" y="594" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+      <rect x="594" y="594" width="158" height="158" rx="34" fill="#f6d798" opacity="0.72"/>
+    </g>
+
+    <g transform="translate(74 74)">
+      <g>
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#fff3d8" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">2</text>
+        <path d="M118 32 C132 38 139 52 134 66 C126 58 112 58 104 68 C100 54 106 40 118 32 Z" fill="#ffffff" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(198 0)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#ffdf79" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">4</text>
+        <ellipse cx="120" cy="44" rx="21" ry="26" fill="#fff8e3" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(396 0)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#ffc0d7" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">8</text>
+        <path d="M105 28 H138 V70 H105 Z" fill="#f59db7" stroke="#6f432b" stroke-width="4"/>
+        <path d="M116 28 V70 M105 48 H138" stroke="#fff0f6" stroke-width="4"/>
+      </g>
+      <g transform="translate(594 0)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#b9edd8" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">16</text>
+        <circle cx="118" cy="42" r="9" fill="#6f432b"/>
+        <circle cx="136" cy="48" r="7" fill="#6f432b"/>
+        <path d="M112 62 Q127 74 142 62" fill="none" stroke="#6f432b" stroke-width="5"/>
+      </g>
+
+      <g transform="translate(0 198)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#ffb46e" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">32</text>
+        <path d="M106 46 C112 18 140 22 134 54" fill="#ef6b5d" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(198 198)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#d7c39b" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">64</text>
+        <rect x="104" y="34" width="42" height="36" rx="8" fill="#a96f45" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(396 198)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#b8dff6" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">128</text>
+        <rect x="104" y="32" width="18" height="18" fill="#ffdf79" stroke="#6f432b" stroke-width="3"/>
+        <rect x="124" y="52" width="18" height="18" fill="#ffc0d7" stroke="#6f432b" stroke-width="3"/>
+      </g>
+      <g transform="translate(594 198)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#f7a1a1" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">256</text>
+        <path d="M114 34 V74" stroke="#6f432b" stroke-width="5"/>
+        <path d="M116 36 H146 L136 54 H116 Z" fill="#f25f62" stroke="#6f432b" stroke-width="4"/>
+      </g>
+
+      <g transform="translate(0 396)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#97df9b" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">512</text>
+        <path d="M108 52 C122 26 148 42 142 66 C128 58 118 70 108 52 Z" fill="#6bc76e" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(198 396)">
+        <rect x="0" y="0" width="158" height="158" rx="34" fill="#f7cf86" class="thinStroke"/>
+        <text x="79" y="96" text-anchor="middle" class="tileNum brown">1024</text>
+        <rect x="102" y="34" width="48" height="34" rx="8" fill="#b77848" stroke="#6f432b" stroke-width="4"/>
+      </g>
+      <g transform="translate(396 396)">
+        <rect x="0" y="0" width="356" height="158" rx="36" fill="#fff0a8" class="thinStroke"/>
+        <text x="122" y="96" text-anchor="middle" class="tileNum brown">2048</text>
+        <g transform="translate(244 22)">
+          <ellipse cx="45" cy="54" rx="40" ry="43" fill="#fff6d8" stroke="#6f432b" stroke-width="5"/>
+          <path d="M17 25 C20 8 42 10 43 28 C51 8 73 15 67 34" fill="#ef6b5d" stroke="#6f432b" stroke-width="4"/>
+          <circle cx="32" cy="52" r="5" fill="#6f432b"/>
+          <path d="M52 52 Q65 55 73 48" fill="none" stroke="#6f432b" stroke-width="5"/>
+          <rect x="15" y="88" width="62" height="38" rx="8" fill="#f5a9be" stroke="#6f432b" stroke-width="4"/>
+          <path d="M36 88 V126 M15 107 H77" stroke="#fff0f6" stroke-width="3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(132 1498)" filter="url(#tinyShadow)">
+    <rect x="0" y="0" width="376" height="126" rx="63" fill="url(#button)" class="stroke"/>
+    <text x="188" y="78" text-anchor="middle" class="buttonText brown">再来一局</text>
+  </g>
+  <g transform="translate(572 1498)" filter="url(#tinyShadow)">
+    <rect x="0" y="0" width="376" height="126" rx="63" fill="url(#pinkButton)" class="stroke"/>
+    <text x="188" y="78" text-anchor="middle" class="buttonText brown">回大厅</text>
+  </g>
+
+  <text x="540" y="1702" text-anchor="middle" class="label brown">数字合成，冲到 2048</text>
+
+  <g transform="translate(150 96)">
+    <path d="M0 0 L34 18 L0 36 Z" fill="#ffc0d7" stroke="#6f432b" stroke-width="5"/>
+    <path d="M76 0 L110 18 L76 36 Z" fill="#ffdf79" stroke="#6f432b" stroke-width="5"/>
+    <path d="M152 0 L186 18 L152 36 Z" fill="#b9edd8" stroke="#6f432b" stroke-width="5"/>
+    <path d="M34 18 H76 M110 18 H152" stroke="#6f432b" stroke-width="5"/>
+  </g>
+</svg>

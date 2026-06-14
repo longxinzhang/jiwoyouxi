@@ -10,7 +10,7 @@ import {
 } from '../shell/GameModule';
 import { GAME_MODULES, moduleById } from '../shell/GameRegistry';
 
-const HOME_GAME_ORDER: string[] = ['suika', 'minesweeper', 'tetris', 'eggSling', 'freecell', 'rps'];
+const HOME_GAME_ORDER: string[] = ['suika', 'minesweeper', 'tetris', 'chicken2048', 'eggSling', 'freecell', 'rps'];
 const HOME_SIDE_PADDING: number = 20;
 const HOME_TOP_PADDING: number = 56;
 const HOME_CONTENT_BOTTOM_SPACE: number = 108;
@@ -254,7 +254,7 @@ export struct HubPage {
     .rowsGap(10)
     .columnsGap(10)
     .width('100%')
-    .height(3 * 96 + 20)
+    .height(this.homeGridHeight())
   }
 
   @Builder
@@ -485,9 +485,10 @@ export struct HubPage {
     Column({ space: 10 }) {
       this.SectionTitleRow('成就墙', '♕', false)
       this.AchievementRow('鸡窝开张', this.totalPlayCount() >= 1, '完成任意 1 局')
-      this.AchievementRow('六边形鸡仔', this.playedGameCount() >= 6, '6 个游戏都玩过')
+      this.AchievementRow('七巧鸡仔', this.playedGameCount() >= 7, '7 个游戏都玩过')
       this.AchievementRow('收藏家', this.snapshot.favorites.length >= 3, '收藏 3 个游戏')
       this.AchievementRow('纸牌归位', this.recordFor('freecell').highScore >= 520, '空当接龙完成四花色归位')
+      this.AchievementRow('2048 高手', this.recordFor('chicken2048').highScore >= 2048, '鸡窝 2048 本局得分达到 2048')
       this.AchievementRow('方块脑', this.recordFor('tetris').highScore >= 1000, '俄罗斯方块达到 1000 分')
       this.AchievementRow('瓜摊老板', this.recordFor('suika').highScore >= 500, '鸡窝水果摊今日瓜分达到 500')
     }
@@ -602,6 +603,11 @@ export struct HubPage {
     return modules;
   }
 
+  private homeGridHeight(): number {
+    const rows = Math.ceil(this.homeModules().length / 2);
+    return rows * 96 + Math.max(0, rows - 1) * 10;
+  }
+
   private heroGameId(): string {
     if (this.snapshot.recent.length > 0) {
       const id = this.snapshot.recent[0];
@@ -615,6 +621,7 @@ export struct HubPage {
 
   private homeTag(gameId: string): string {
     if (gameId === 'suika') return '鸡窝瓜摊';
+    if (gameId === 'chicken2048') return '数字叠叠乐';
     if (gameId === 'minesweeper') return '小心鸡雷';
     if (gameId === 'tetris') return '方块下蛋';
     if (gameId === 'eggSling') return '咻啪发射';
@@ -821,16 +828,17 @@ export struct HubPage {
   private unlockedBadges(): number {
     let count = 0;
     if (this.totalPlayCount() >= 1) count += 1;
-    if (this.playedGameCount() >= 6) count += 1;
+    if (this.playedGameCount() >= 7) count += 1;
     if (this.snapshot.favorites.length >= 3) count += 1;
     if (this.recordFor('freecell').highScore >= 520) count += 1;
+    if (this.recordFor('chicken2048').highScore >= 2048) count += 1;
     if (this.recordFor('tetris').highScore >= 1000) count += 1;
     if (this.recordFor('suika').highScore >= 500) count += 1;
     return count;
   }
 
   private badgeTotal(): number {
-    return 6;
+    return 7;
   }
 
   private playStreak(): number {

@@ -8,6 +8,7 @@ import { HubPage } from './HubPage';
 import { RpsPage } from '../games/rps/RpsPage';
 import { FreecellPage } from '../games/freecell/FreecellPage';
 import { MinesweeperPage } from '../games/minesweeper/MinesweeperPage';
+import { Chicken2048Page } from '../games/chicken2048/Chicken2048Page';
 import { TetrisPage } from '../games/tetris/TetrisPage';
 import { SuikaPage } from '../games/suika/SuikaPage';
 import { EggSlingPage } from '../games/eggSling/EggSlingPage';
@@ -111,6 +112,18 @@ struct Index {
             },
             recordScore: (score: number) => {
               this.recordGameResult('minesweeper', score);
+            }
+          })
+        }
+      } else if (this.activeGame === 'chicken2048') {
+        GameSceneTransition({ role: 'game', sceneDirection: this.sceneDirection }) {
+          Chicken2048Page({
+            bestScore: this.recordFor('chicken2048').highScore,
+            exitToHub: () => {
+              this.closeGameAnimated();
+            },
+            recordScore: (score: number) => {
+              this.recordGameResult('chicken2048', score);
             }
           })
         }

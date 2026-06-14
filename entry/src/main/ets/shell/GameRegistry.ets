@@ -29,6 +29,15 @@ export const GAME_MODULES: GameModule[] = [
     highScoreLabel: '最高得分'
   },
   {
+    id: 'chicken2048',
+    title: '鸡窝 2048',
+    subtitle: '滑动数字块合成升级，冲到 2048',
+    icon: '2',
+    tags: ['合成', '棋盘', '轻松'],
+    accent: '#f4a62a',
+    highScoreLabel: '最高分'
+  },
+  {
     id: 'tetris',
     title: '俄罗斯方块',
     subtitle: '10×20 网格、7 种方块、消行升级',
