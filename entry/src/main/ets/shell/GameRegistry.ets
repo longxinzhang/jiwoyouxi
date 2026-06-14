@@ -11,13 +11,13 @@ export const GAME_MODULES: GameModule[] = [
     highScoreLabel: '最高存活数'
   },
   {
-    id: 'whiteTiles',
-    title: '别踩白块',
-    subtitle: '四列节奏反应，点黑块，漏掉即败',
-    icon: '▦',
-    tags: ['反应', '竖屏', '快速'],
-    accent: '#1f2937',
-    highScoreLabel: '最高行数'
+    id: 'freecell',
+    title: '空当接龙',
+    subtitle: '经典纸牌策略，红黑交替递减，四花色归位',
+    icon: '♣',
+    tags: ['纸牌', '策略', '竖屏'],
+    accent: '#b46b2a',
+    highScoreLabel: '最高分'
   },
   {
     id: 'minesweeper',

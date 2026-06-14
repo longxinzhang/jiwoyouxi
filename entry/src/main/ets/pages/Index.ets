@@ -6,7 +6,7 @@ import { GameEntryBadge } from '../shell/GameEntryBadge';
 import { GameSceneTransition } from '../shell/GameSceneTransition';
 import { HubPage } from './HubPage';
 import { RpsPage } from '../games/rps/RpsPage';
-import { WhiteTilesPage } from '../games/whiteTiles/WhiteTilesPage';
+import { FreecellPage } from '../games/freecell/FreecellPage';
 import { MinesweeperPage } from '../games/minesweeper/MinesweeperPage';
 import { TetrisPage } from '../games/tetris/TetrisPage';
 import { SuikaPage } from '../games/suika/SuikaPage';
@@ -89,15 +89,15 @@ struct Index {
             }
           })
         }
-      } else if (this.activeGame === 'whiteTiles') {
+      } else if (this.activeGame === 'freecell') {
         GameSceneTransition({ role: 'game', sceneDirection: this.sceneDirection }) {
-          WhiteTilesPage({
-            bestScore: this.recordFor('whiteTiles').highScore,
+          FreecellPage({
+            bestScore: this.recordFor('freecell').highScore,
             exitToHub: () => {
               this.closeGameAnimated();
             },
             recordScore: (score: number) => {
-              this.recordGameResult('whiteTiles', score);
+              this.recordGameResult('freecell', score);
             }
           })
         }

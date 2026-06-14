@@ -11,7 +11,9 @@ type SoundKey =
   'power' |
   'suika_merge_pop' |
   'suika_merge_splash' |
-  'suika_merge_final';
+  'suika_merge_final' |
+  'freecellClick' |
+  'freecellHint';
 
 interface SoundAsset {
   key: SoundKey;
@@ -27,7 +29,9 @@ const SOUND_ASSETS: SoundAsset[] = [
   { key: 'power', path: 'audio/warning-diudiu.mp3' },
   { key: 'suika_merge_pop', path: 'games/suika/audio/merge_pop.mp3' },
   { key: 'suika_merge_splash', path: 'games/suika/audio/merge_splash.mp3' },
-  { key: 'suika_merge_final', path: 'games/suika/audio/merge_final.mp3' }
+  { key: 'suika_merge_final', path: 'games/suika/audio/merge_final.mp3' },
+  { key: 'freecellClick', path: 'audio/freecell-click.mp3' },
+  { key: 'freecellHint', path: 'audio/freecell-hint.mp3' }
 ];
 
 export class NativeAudioService {
