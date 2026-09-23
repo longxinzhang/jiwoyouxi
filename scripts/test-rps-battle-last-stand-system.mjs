@@ -22,6 +22,9 @@ const sourceFiles = [
   'entry/src/main/ets/games/rpsBattle/RpsBattleTraitorSystem.ets',
   'entry/src/main/ets/games/rpsBattle/RpsBattleSnapSystem.ets',
   'entry/src/main/ets/games/rpsBattle/RpsBattleObstacleSystem.ets',
+  'entry/src/main/ets/games/rpsBattle/RpsBattleBountySystem.ets',
+  'entry/src/main/ets/games/rpsBattle/RpsBattleGodHandSystem.ets',
+  'entry/src/main/ets/games/rpsBattle/RpsBattleTenAgainstOneSystem.ets',
   'entry/src/main/ets/games/rpsBattle/RpsBattleEngine.ets'
 ];
 
@@ -243,6 +246,10 @@ test('存在复活印记时引擎不会立即按清场结算', () => {
     mechanics: {
       blackHole: false,
       lastStand: true
+    },
+    enhancements: {
+      comebackRule: 'none',
+      godHandEnabled: false
     },
     supportFaction: 'rock',
     initialCounts: counts(1, 0, 0),
